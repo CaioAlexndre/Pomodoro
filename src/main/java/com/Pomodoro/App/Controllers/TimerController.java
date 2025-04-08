@@ -1,12 +1,12 @@
 package com.Pomodoro.App.Controllers;
 
+import com.Pomodoro.App.Models.Dtos.CycleInfo;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 
 @RequestMapping()
+
 @Controller
 public class TimerController
 {
@@ -20,11 +20,18 @@ public class TimerController
         return "TimerPage";
     }
 
+    @ResponseBody  //me retorna o conteudo e nao a pagina.
     @PostMapping("/NewCycle")
-    public void saveStudyCycle()
+    public String  saveStudyCycle(@RequestBody CycleInfo cycleInfo)
     {
 
+        System.out.println("Username: " + cycleInfo.getUsername());
+        System.out.println("CycleId: " + cycleInfo.getCycleId());
+        System.out.println("CycleConclusion: " + cycleInfo.isCycleConclusion());
+        return "Dados recebidos com sucesso!";
     }
+
+
 
     //para nao esquecer: estou indo pegar os dados.
     @GetMapping("/RecoveryCycle")
