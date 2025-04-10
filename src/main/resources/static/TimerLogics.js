@@ -1,55 +1,77 @@
-function Countdown()
-{
-
-let SecondsLeft = 10;
-let MinutesLeft = 0;
+//polir essa funcao,adicionar.
+    //bug 1: stop reinicia o timer.
 
 
-    if (SecondsLeft < 60 && MinutesLeft < 60)
+    function Countdown()
     {
 
-        function CountdownReduce ()
+    let SecondsLeft = 10;
+    let MinutesLeft = 0;
+
+    document.getElementById("minutes").innerHTML = MinutesLeft
+    document.getElementById("seconds").innerHTML =  ":"+SecondsLeft
+
+        if (SecondsLeft < 60 && MinutesLeft < 60)
         {
 
-            console.log(`Minutos: ${MinutesLeft} | Segundos: ${SecondsLeft}`);
+            function CountdownReduce ()
+            {
 
-        SecondsLeft--;
-        document.getElementById("seconds").innerHTML = SecondsLeft
+
+
+                document.getElementById("seconds").innerHTML = ":"+SecondsLeft
+                SecondsLeft--;
+
+                if(SecondsLeft<10)
+                {
+                    document.getElementById("seconds").innerHTML = ":0"+SecondsLeft
+                }
+
 
 
             if (SecondsLeft == 0 && MinutesLeft >= 1)
             {
                 SecondsLeft = 59;
-
-                console.log(MinutesLeft);
                 MinutesLeft--;
                 document.getElementById("minutes").innerHTML = MinutesLeft
+                    if(MinutesLeft<1)
+                    {
+                        document.getElementById("minutes").innerHTML = "00:"
+                    }
+
+                    if(MinutesLeft<=9)
+                    {
+                        document.getElementById("minutes").innerHTML = "0" +MinutesLeft
+                    }
             }
 
             if(MinutesLeft == 0 && SecondsLeft == 0)
             {
                 clearInterval(interval);
-                console.log("Tempo esgotado!");
                 let url = "http://localhost:8080/NewCycle"
                 FazPost(url,Cycle)
 
-
-
-
-
-
-
             }
+
+
+
+            window.CountdownStop = function ()
+            {
+                clearInterval(interval);
+            };
+            }
+
+        }
+        else
+        {
+            console.log("um erro ocorreu")
         }
 
-    }
-    else
-    {
-        console.log("um erro ocorreu")
+
+
+        let interval = setInterval(CountdownReduce,1000)
     }
 
-    let interval = setInterval(CountdownReduce,1000)
-}
 
 
 function FazPost(URL,body)

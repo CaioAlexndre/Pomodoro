@@ -5,15 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script th:src="@{/TimerLogics.js}"></script>
+    <link rel="stylesheet" th:href="@{/TimerPage.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+
 </head>
 
 
 <body>
 
-<p id="minutes"></p>
-<p id="seconds"></p>
-<button onclick="CountdownStop()">  Parar</button>
-<button id="start" onclick="Countdown()">Start</button>
+<main>
+    <article id="ContainerMensagem">
+        <p id="MensagemM">
+            A ideia é nunca perder a motivação para subir cada degrau rumo ao sucesso,
+            por mais difícil que seja.
+            E também não esquecer de agradecer pelas lições aprendidas em cada etapa da jornada
+        </p>
+    </article>
+
+
+
+    <article>
+        <figure>
+            <img id="PomodoroImage" th:src="@{/pomodoro.png}" alt="Tomate pomodoro">
+        </figure>
+
+        <div id="CenterTimer">
+            <p id="minutes" contenteditable="true">00:</p>
+            <p id="seconds" contenteditable="true">00</p>
+        </div>
+
+        <button id="Add"> + </button>
+        <button id="start" onclick="Countdown()">Start</button>
+        <button id ="Stop" onclick="CountdownStop()">  Parar</button>
+
+    </article>
+
+
+    <div class="Menu">
+        <button id="stats"> Estáticas</button>
+        <button id="Timer"> Timer</button>
+        <button id="Ranking"> Ranking</button>
+    </div>
+</main>
+
+
+
+
+
+
 
 
 
