@@ -34,7 +34,25 @@
             <p id="seconds" contenteditable="true">00</p>
         </div>
 
-        <button id="Add"> + </button>
+        <button id="Add" onclick="openaddCategory()"> + </button>
+            <dialog id = "dAddCategory">
+                <p>
+                  Nome categoria
+                </p>
+
+                <p>
+                    sub-categoria
+                </p>
+
+                <p>
+                    cor
+                </p>
+
+                <p>
+                    meta diaria
+                </p>
+
+            </dialog>
         <button id="start" onclick="Countdown()">Start</button>
         <button id ="Stop" onclick="CountdownStop()">  Parar</button>
 

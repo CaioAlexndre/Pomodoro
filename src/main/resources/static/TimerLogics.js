@@ -1,3 +1,12 @@
+     function openaddCategory()
+            {
+                var dAddCategory = document.getElementById("dAddCategory");
+                dAddCategory.showModal();
+            }
+
+
+
+
 //polir essa funcao,adicionar.
     //bug 1: stop reinicia o timer.
 
