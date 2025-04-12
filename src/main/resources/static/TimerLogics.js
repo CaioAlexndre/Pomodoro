@@ -11,6 +11,7 @@
     //bug 1: stop reinicia o timer.
 
 
+
     function Countdown()
     {
 
@@ -27,13 +28,14 @@
             {
 
 
-
                 document.getElementById("seconds").innerHTML = ":"+SecondsLeft
                 SecondsLeft--;
 
-                if(SecondsLeft<10)
+                if(SecondsLeft<10 && MinutesLeft<1)
                 {
+                    document.getElementById("minutes").innerHTML = "00"
                     document.getElementById("seconds").innerHTML = ":0"+SecondsLeft
+
                 }
 
 
@@ -45,6 +47,7 @@
                 document.getElementById("minutes").innerHTML = MinutesLeft
                     if(MinutesLeft<1)
                     {
+
                         document.getElementById("minutes").innerHTML = "00:"
                     }
 
