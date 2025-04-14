@@ -32,7 +32,6 @@ public class TimerController
     }
 
 
-
     //para nao esquecer: estou indo pegar os dados.
     @GetMapping("/RecoveryCycle")
     public String recoveryStudyCycle()
