@@ -35,27 +35,34 @@
         </div>
 
         <button id="Add" onclick="openaddCategory()"> + </button>
+
             <dialog id = "dAddCategory">
-                <p>
-                  Nome categoria
-                </p>
+                        <h1> adicionar categoria</h1>
 
-                <p>
-                    sub-categoria
-                </p>
 
-                <p>
-                    cor
-                </p>
+                <form action="/SaveCategory" method="POST">
 
-                <p>
-                    meta diaria
-                </p>
+                    <label for="Categoryname">Nome da Categoria:</label>
+                    <input type="text" name="Categoryname" id="Categoryname" placeholder="Your name">
+
+                    <label for="sub-category">Nome da sub categoria:</label>
+                    <input type="text" id="sub-category" name="name_sub_category">
+
+                    <label for="Day_challenge">Meta diaria:</label>
+                    <input type="number" id="Day_challenge" name="day_challenge">
+
+                    <label for="color_select">Selecione uma cor:</label>
+                    <input type="color" id="color_select">
+
+                    <input type="submit" value="submit">
+
+                </form>
 
             </dialog>
+
+
         <button id="start" onclick="Countdown()">Start</button>
         <button id ="Stop" onclick="CountdownStop()">  Parar</button>
-
     </article>
 
 
