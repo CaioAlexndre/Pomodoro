@@ -1,0 +1,42 @@
+/*
+#524656
+#CF4747
+#A6C4BC ponto
+#f7efdf
+#f7efdf
+*/
+
+#SearchBar
+{
+    width: 82%;
+    margin-left: 10px;
+}
+
+#rankin
+{
+max-width:92%;
+    height: 400px;
+    margin:10px;
+
+background-color:#A6C4BC;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+border-width: 3px 3px 3px 3px;
+    border-style: solid;
+    border-color: black;
+
+}
+
+#RankingClassif
+{
+    font-size: 1rem;
+        color:#38303b;
+        padding: 2px;
+        margin:5px;
+}
+
+td
+{
+   padding: 5px;
+}

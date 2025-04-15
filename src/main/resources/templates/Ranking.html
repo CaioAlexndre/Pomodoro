@@ -4,16 +4,168 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script th:src="@{/TimerLogics.js}"></script>
-    <link rel="stylesheet" th:href="@{/TimerPage.css}" />
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" th:href="@{/TimerPage.css}" />
+    <link rel="stylesheet" th:href="@{/Ranking.css}"/>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
 <main>
 
+    <div >
+        <!-- //Search filter //optionbutton -->
+        <form  action="/searchAll" method="Post">
+            <input id="SearchBar" type="text" placeholder="search" name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+    <section id="rankin">
+        <!-- //name //points //cycles conclude //position -->
+
+        <table id="RankingPlayers">
+            <thead>
+            <tr id="RankingClassif">
+                <th>Name</th>
+                <th>Points</th>
+                <th>Cycles</th>
+                <th>Pos</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Ana</td>
+                <td>120</td>
+                <td>5</td>
+                <td>1st</td>
+            </tr>
+            <tr>
+                <td>Bruno</td>
+                <td>95</td>
+                <td>6</td>
+                <td>2nd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            <tr>
+                <td>Carla</td>
+                <td>80</td>
+                <td>4</td>
+                <td>3rd</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </section>
 
 
 
